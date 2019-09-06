@@ -17,13 +17,9 @@ class CustomTransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,8 +31,4 @@ class CustomTransactionTableViewCell: UITableViewCell {
         self.layer.shadowOpacity = 0.5
         self.tintColor = .white
     }
-    
-    
-    
-    
 }

@@ -12,7 +12,6 @@
 		4716670823198EA2005597BD /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716670723198EA2005597BD /* TransactionViewController.swift */; };
 		4716670B23198EA2005597BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4716670923198EA2005597BD /* Main.storyboard */; };
 		4716670D23198EA4005597BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4716670C23198EA4005597BD /* Assets.xcassets */; };
-		4716671023198EA4005597BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4716670E23198EA4005597BD /* LaunchScreen.storyboard */; };
 		47238F65231F300100F519DB /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47238F64231F300100F519DB /* UIViewController+Alert.swift */; };
 		47675E1D2321642A005B24F3 /* JWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47675E1C2321642A005B24F3 /* JWButton.swift */; };
 		47675E2023217323005B24F3 /* CustomTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47675E1E23217323005B24F3 /* CustomTransactionTableViewCell.swift */; };
@@ -30,7 +29,6 @@
 		4716670723198EA2005597BD /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		4716670A23198EA2005597BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4716670C23198EA4005597BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4716670F23198EA4005597BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4716671123198EA4005597BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47238F64231F300100F519DB /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		47675E1C2321642A005B24F3 /* JWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWButton.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				47675E1C2321642A005B24F3 /* JWButton.swift */,
 				4716670523198EA2005597BD /* AppDelegate.swift */,
 				4716670C23198EA4005597BD /* Assets.xcassets */,
-				4716670E23198EA4005597BD /* LaunchScreen.storyboard */,
 				4716671123198EA4005597BD /* Info.plist */,
 			);
 			path = Resources;
@@ -209,7 +206,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4716671023198EA4005597BD /* LaunchScreen.storyboard in Resources */,
 				4716670D23198EA4005597BD /* Assets.xcassets in Resources */,
 				4716670B23198EA2005597BD /* Main.storyboard in Resources */,
 				47675E2123217323005B24F3 /* CustomTransactionTableViewCell.xib in Resources */,
@@ -285,14 +281,6 @@
 				4716670A23198EA2005597BD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4716670E23198EA4005597BD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4716670F23198EA4005597BD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -23,8 +23,3 @@ struct Transaction: Codable {
     let fromAddress: String?
 }
 
-//struct TransactionPost: Codable {
-//    let fromAddress: String
-//    let toAddrewss: String
-//    let amount: String
-//}

@@ -18,12 +18,12 @@ enum APIError: Error {
 }
 
 class APIService {
-    
+   
+    // TODO: build URLS from base URL
     var tc = TransactionViewController()
-    
     let baseURL = "http://jobcoin.gemini.com/helpless/api/"
     static let shared = APIService()
-    let decoder = JSONDecoder()
+   
     
     enum APIError: Error {
         case responseProblem
@@ -34,7 +34,7 @@ class APIService {
         case otherProblem
     }
     
-    
+    //MARK: - GET Transactions
     func getTransactions(completion: @escaping( Result<[Transaction], APIError>) -> Void) {
         
         guard let baseURL = URL(string: "http://jobcoin.gemini.com/helpless/api/transactions") else { return }
@@ -63,7 +63,7 @@ class APIService {
         dataTask.resume()
     }
 
-    
+    //MARK: - GET User Balance
     func getUserBalance(user: String, completion: @escaping(Result<Balance, APIError>) -> Void)  {
     
         let jsonURLString = "https://jobcoin.gemini.com/helpless/api/addresses/\(user)"
@@ -98,6 +98,7 @@ class APIService {
         dataTask.resume()
     }
     
+    // MARK: - POST Transactions
     func postTransaction(transaction: Transaction, completion: @escaping(Result<Transaction, APIError>) -> Void) {
     
     do {
