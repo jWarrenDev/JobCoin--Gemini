@@ -9,8 +9,8 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
-    let tc = TransactionViewController()
+    
+    var allTransactions: [Transaction] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class SignInViewController: UIViewController {
             case .failure(let error):
                 print(error)
             case .success(let transactions):
-                self?.tc.allTransactions = transactions
+                self?.allTransactions = transactions
             }
         }
     }
@@ -46,7 +46,7 @@ class SignInViewController: UIViewController {
             return
         }
         
-        let users = Set(tc.allTransactions.compactMap({ $0.toAddress ?? $0.fromAddress }))
+        let users = Set(allTransactions.compactMap({ $0.toAddress ?? $0.fromAddress }))
        
         for user in users {
             if userNameTextField.text == user {
@@ -68,8 +68,8 @@ class SignInViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "usersegue" {
-            let DestinationVC : TransactionViewController = segue.destination as! TransactionViewController
-            DestinationVC.user = userNameTextField.text! 
+            let destinationVC : TransactionViewController = segue.destination as! TransactionViewController
+            destinationVC.user = userNameTextField.text! 
         
         }
     }
