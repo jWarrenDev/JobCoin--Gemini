@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28A3FD4FF6B9C8FF1D20F099 /* Pods_JobCoin_Wallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC2091B36A964766EB874E5 /* Pods_JobCoin_Wallet.framework */; };
+		4716670623198EA2005597BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716670523198EA2005597BD /* AppDelegate.swift */; };
+		4716670823198EA2005597BD /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4716670723198EA2005597BD /* TransactionViewController.swift */; };
+		4716670B23198EA2005597BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4716670923198EA2005597BD /* Main.storyboard */; };
+		4716670D23198EA4005597BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4716670C23198EA4005597BD /* Assets.xcassets */; };
+		4716671023198EA4005597BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4716670E23198EA4005597BD /* LaunchScreen.storyboard */; };
+		47238F65231F300100F519DB /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47238F64231F300100F519DB /* UIViewController+Alert.swift */; };
+		47675E1D2321642A005B24F3 /* JWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47675E1C2321642A005B24F3 /* JWButton.swift */; };
+		47675E2023217323005B24F3 /* CustomTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47675E1E23217323005B24F3 /* CustomTransactionTableViewCell.swift */; };
+		47675E2123217323005B24F3 /* CustomTransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47675E1F23217323005B24F3 /* CustomTransactionTableViewCell.xib */; };
+		47675E252321ED21005B24F3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47675E242321ED21005B24F3 /* APIService.swift */; };
+		47834CE82319F28A00D16C96 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47834CE72319F28A00D16C96 /* TransactionModel.swift */; };
+		47834CEC231D985600D16C96 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47834CEB231D985600D16C96 /* SignInViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1BC2091B36A964766EB874E5 /* Pods_JobCoin_Wallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobCoin_Wallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E5351A601983F47955AE18 /* Pods-JobCoin Wallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobCoin Wallet.release.xcconfig"; path = "Target Support Files/Pods-JobCoin Wallet/Pods-JobCoin Wallet.release.xcconfig"; sourceTree = "<group>"; };
+		4716670223198EA2005597BD /* JobCoin Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JobCoin Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4716670523198EA2005597BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4716670723198EA2005597BD /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		4716670A23198EA2005597BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4716670C23198EA4005597BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4716670F23198EA4005597BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4716671123198EA4005597BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47238F64231F300100F519DB /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		47675E1C2321642A005B24F3 /* JWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWButton.swift; sourceTree = "<group>"; };
+		47675E1E23217323005B24F3 /* CustomTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTransactionTableViewCell.swift; path = "JobCoin Wallet/StoryBoard/CustomTransactionTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		47675E1F23217323005B24F3 /* CustomTransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CustomTransactionTableViewCell.xib; path = "JobCoin Wallet/StoryBoard/CustomTransactionTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		47675E242321ED21005B24F3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		47834CE72319F28A00D16C96 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		47834CEB231D985600D16C96 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C018D30523D2F0C95242F844 /* Pods-JobCoin Wallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobCoin Wallet.debug.xcconfig"; path = "Target Support Files/Pods-JobCoin Wallet/Pods-JobCoin Wallet.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		471666FF23198EA2005597BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28A3FD4FF6B9C8FF1D20F099 /* Pods_JobCoin_Wallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		026C2191289A67CD8D593C62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BC2091B36A964766EB874E5 /* Pods_JobCoin_Wallet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F8956CCA0E93D891D3C45BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C018D30523D2F0C95242F844 /* Pods-JobCoin Wallet.debug.xcconfig */,
+				33E5351A601983F47955AE18 /* Pods-JobCoin Wallet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		471666F923198EA2005597BD = {
+			isa = PBXGroup;
+			children = (
+				4716670423198EA2005597BD /* JobCoin Wallet */,
+				4716670323198EA2005597BD /* Products */,
+				1F8956CCA0E93D891D3C45BD /* Pods */,
+				026C2191289A67CD8D593C62 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4716670323198EA2005597BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4716670223198EA2005597BD /* JobCoin Wallet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4716670423198EA2005597BD /* JobCoin Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				47834CED231D987900D16C96 /* View Controllers */,
+				47675E18232150D8005B24F3 /* Model  */,
+				47675E1A232157A9005B24F3 /* StoryBoard */,
+				47675E1B232157B3005B24F3 /* Cell */,
+				47675E1923215795005B24F3 /* Resources */,
+			);
+			path = "JobCoin Wallet";
+			sourceTree = "<group>";
+		};
+		47675E18232150D8005B24F3 /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+				47834CE72319F28A00D16C96 /* TransactionModel.swift */,
+			);
+			path = "Model ";
+			sourceTree = "<group>";
+		};
+		47675E1923215795005B24F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47238F64231F300100F519DB /* UIViewController+Alert.swift */,
+				47675E242321ED21005B24F3 /* APIService.swift */,
+				47675E1C2321642A005B24F3 /* JWButton.swift */,
+				4716670523198EA2005597BD /* AppDelegate.swift */,
+				4716670C23198EA4005597BD /* Assets.xcassets */,
+				4716670E23198EA4005597BD /* LaunchScreen.storyboard */,
+				4716671123198EA4005597BD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47675E1A232157A9005B24F3 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4716670923198EA2005597BD /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		47675E1B232157B3005B24F3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				47675E1E23217323005B24F3 /* CustomTransactionTableViewCell.swift */,
+				47675E1F23217323005B24F3 /* CustomTransactionTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		47834CED231D987900D16C96 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4716670723198EA2005597BD /* TransactionViewController.swift */,
+				47834CEB231D985600D16C96 /* SignInViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4716670123198EA2005597BD /* JobCoin Wallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4716671423198EA4005597BD /* Build configuration list for PBXNativeTarget "JobCoin Wallet" */;
+			buildPhases = (
+				FC4472FA1977C98103DDC16F /* [CP] Check Pods Manifest.lock */,
+				471666FE23198EA2005597BD /* Sources */,
+				471666FF23198EA2005597BD /* Frameworks */,
+				4716670023198EA2005597BD /* Resources */,
+				65655F9C8BFAB557B08C2FCB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JobCoin Wallet";
+			productName = "JSON PARSING";
+			productReference = 4716670223198EA2005597BD /* JobCoin Wallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		471666FA23198EA2005597BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Jerrick Warren";
+				TargetAttributes = {
+					4716670123198EA2005597BD = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 471666FD23198EA2005597BD /* Build configuration list for PBXProject "JobCoin Wallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 471666F923198EA2005597BD;
+			productRefGroup = 4716670323198EA2005597BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4716670123198EA2005597BD /* JobCoin Wallet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4716670023198EA2005597BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4716671023198EA4005597BD /* LaunchScreen.storyboard in Resources */,
+				4716670D23198EA4005597BD /* Assets.xcassets in Resources */,
+				4716670B23198EA2005597BD /* Main.storyboard in Resources */,
+				47675E2123217323005B24F3 /* CustomTransactionTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65655F9C8BFAB557B08C2FCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JobCoin Wallet/Pods-JobCoin Wallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JobCoin Wallet/Pods-JobCoin Wallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JobCoin Wallet/Pods-JobCoin Wallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC4472FA1977C98103DDC16F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JobCoin Wallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		471666FE23198EA2005597BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47675E1D2321642A005B24F3 /* JWButton.swift in Sources */,
+				47834CE82319F28A00D16C96 /* TransactionModel.swift in Sources */,
+				47675E2023217323005B24F3 /* CustomTransactionTableViewCell.swift in Sources */,
+				47834CEC231D985600D16C96 /* SignInViewController.swift in Sources */,
+				4716670823198EA2005597BD /* TransactionViewController.swift in Sources */,
+				4716670623198EA2005597BD /* AppDelegate.swift in Sources */,
+				47675E252321ED21005B24F3 /* APIService.swift in Sources */,
+				47238F65231F300100F519DB /* UIViewController+Alert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4716670923198EA2005597BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4716670A23198EA2005597BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4716670E23198EA4005597BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4716670F23198EA4005597BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4716671223198EA4005597BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4716671323198EA4005597BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4716671523198EA4005597BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C018D30523D2F0C95242F844 /* Pods-JobCoin Wallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JG93VFG2G;
+				INFOPLIST_FILE = "$(SRCROOT)/JobCoin Wallet/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jerrickwarren.JSON-PARSING";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4716671623198EA4005597BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E5351A601983F47955AE18 /* Pods-JobCoin Wallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JG93VFG2G;
+				INFOPLIST_FILE = "$(SRCROOT)/JobCoin Wallet/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jerrickwarren.JSON-PARSING";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		471666FD23198EA2005597BD /* Build configuration list for PBXProject "JobCoin Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4716671223198EA4005597BD /* Debug */,
+				4716671323198EA4005597BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4716671423198EA4005597BD /* Build configuration list for PBXNativeTarget "JobCoin Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4716671523198EA4005597BD /* Debug */,
+				4716671623198EA4005597BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 471666FA23198EA2005597BD /* Project object */;
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GxK-d7-bZB">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="JfI-58-DLU">
+            <objects>
+                <viewController id="GxK-d7-bZB" customClass="SignInViewController" customModule="JobCoin_Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FaZ-kT-XFX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J15-vX-Ybb">
+                                <rect key="frame" x="50" y="94" width="314" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JobCoin" translatesAutoresizingMaskIntoConstraints="NO" id="lf0-OL-sfa">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="195"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-Yw-vGy">
+                                        <rect key="frame" x="0.0" y="203" width="314" height="97"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8r-S5-pet">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9U-Ro-Wu2" customClass="JWButton" customModule="JobCoin_Wallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="67" width="314" height="30"/>
+                                                <state key="normal" title="Sign In"/>
+                                                <connections>
+                                                    <action selector="signInButtonPressed:" destination="GxK-d7-bZB" eventType="touchUpInside" id="frs-lK-FVn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bDq-Yw-vGy" secondAttribute="trailing" id="CEb-Kr-tIP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.68920922279999997" blue="0.92659163479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J15-vX-Ybb" firstAttribute="leading" secondItem="DQ2-rP-hX6" secondAttribute="leading" constant="50" id="PZM-fI-E2y"/>
+                            <constraint firstItem="J15-vX-Ybb" firstAttribute="top" secondItem="DQ2-rP-hX6" secondAttribute="top" constant="50" id="ubr-1S-Fcm"/>
+                            <constraint firstAttribute="trailing" secondItem="J15-vX-Ybb" secondAttribute="trailing" constant="50" id="wvW-rJ-FfE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DQ2-rP-hX6"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="W9U-Ro-Wu2" id="hJl-Jd-xBd"/>
+                        <outlet property="userNameTextField" destination="n8r-S5-pet" id="kpF-An-5pR"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="usersegue" id="fjl-1W-vFL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22z-Yb-Ppm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614" y="68"/>
+        </scene>
+        <!--Transaction View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="TransactionViewController" id="BYZ-38-t0r" customClass="TransactionViewController" customModule="JobCoin_Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gDz-Dd-h4N">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-g3-F6Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oZc-PT-bqA">
+                                                <rect key="frame" x="42" y="36.5" width="330" height="66"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="SNu-yT-hbz"/>
+                                                    <constraint firstAttribute="height" constant="66" id="wDI-UV-Y7F"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="oZc-PT-bqA" secondAttribute="trailing" constant="42" id="Mzb-6J-sHZ"/>
+                                            <constraint firstItem="oZc-PT-bqA" firstAttribute="top" secondItem="0n0-g3-F6Z" secondAttribute="top" constant="36.5" id="Rfm-Pv-ACq"/>
+                                            <constraint firstAttribute="height" constant="325" id="eUg-4o-XYs"/>
+                                            <constraint firstItem="oZc-PT-bqA" firstAttribute="leading" secondItem="0n0-g3-F6Z" secondAttribute="leading" constant="42" id="pBH-ml-EgC"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fOV-ac-PVv">
+                                        <rect key="frame" x="0.0" y="333" width="414" height="447"/>
+                                        <color key="backgroundColor" red="0.0" green="0.68920922279999997" blue="0.92659163479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="45" id="3gU-Lk-pbQ" customClass="CustomTransactionTableViewCell" customModule="JobCoin_Wallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="45"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3gU-Lk-pbQ" id="WnN-P8-Q2O" customClass="TransactionTableViewCell" customModule="JobCoin_Wallet" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="TRw-4x-pr6"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ohL-1y-Vkj"/>
+                                        </connections>
+                                    </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="ioP-ES-egE">
+                                        <rect key="frame" x="0.0" y="788" width="414" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8t4-yM-7h6" customClass="JWButton" customModule="JobCoin_Wallet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="144.5" height="30"/>
+                                                <state key="normal" title="Sign Out"/>
+                                                <connections>
+                                                    <action selector="signOutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viJ-YG-Fce"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyl-3N-IgR" customClass="JWButton" customModule="JobCoin_Wallet" customModuleProvider="target">
+                                                <rect key="frame" x="269.5" y="0.0" width="144.5" height="30"/>
+                                                <state key="normal" title="Send Coins"/>
+                                                <connections>
+                                                    <action selector="sendCoinsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7a-hd-dCp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.68920922279999997" blue="0.92659163479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gDz-Dd-h4N" secondAttribute="bottom" id="Klx-kn-kcD"/>
+                            <constraint firstItem="gDz-Dd-h4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Loq-Yh-AGo"/>
+                            <constraint firstItem="gDz-Dd-h4N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P18-W7-JWd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDz-Dd-h4N" secondAttribute="trailing" id="ZrW-f4-v1P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="oZc-PT-bqA" id="dUg-wN-fd4"/>
+                        <outlet property="chartView" destination="0n0-g3-F6Z" id="h1s-dG-cZ2"/>
+                        <outlet property="tableView" destination="fOV-ac-PVv" id="1Fd-ix-uns"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="JobCoin" width="360" height="195"/>
+    </resources>
+</document>
