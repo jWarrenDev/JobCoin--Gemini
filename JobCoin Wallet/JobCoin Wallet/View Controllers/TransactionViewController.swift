@@ -17,7 +17,6 @@ class TransactionViewController: UIViewController {
     // MARK: - Variables
     
     var transactions = [Transaction]()
-    var allTransactions = [Transaction]()
     var balance: Balance?
     var chart = Chart()
     var personalTransactions = [Double]()
@@ -126,12 +125,13 @@ class TransactionViewController: UIViewController {
         ac.addTextField { (pTextField) in
             pTextField.placeholder = "Name or Address"
             pTextField.clearButtonMode = .whileEditing
-            pTextField.borderStyle = .none
+            pTextField.borderStyle = .roundedRect
             }
         ac.addTextField() { (pTextField) in
             pTextField.placeholder = "Amount to send "
             pTextField.clearButtonMode = .whileEditing
-            pTextField.borderStyle = .none
+            pTextField.borderStyle = .roundedRect
+          
         }
         
         let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac] _ in
