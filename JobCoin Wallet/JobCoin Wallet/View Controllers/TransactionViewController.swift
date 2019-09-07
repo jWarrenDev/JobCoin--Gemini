@@ -32,7 +32,7 @@ class TransactionViewController: UIViewController {
         
         balanceLabel.layer.zPosition = +1
         
-        let frame = CGRect(x: 0, y: 0, width: chartView.frame.width, height: chartView.frame.height + 20)
+        let frame = CGRect(x: 0, y: 0, width: chartView.frame.width, height: chartView.frame.height )
         chart = Chart(frame: frame)
         chartView.addSubview(chart)
         

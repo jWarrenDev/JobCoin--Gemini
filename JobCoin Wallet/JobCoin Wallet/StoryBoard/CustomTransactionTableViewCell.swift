@@ -16,6 +16,7 @@ class CustomTransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var fromAddressLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
+    @IBOutlet weak var cellView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,5 +31,8 @@ class CustomTransactionTableViewCell: UITableViewCell {
         self.layer.masksToBounds = true
         self.layer.shadowOpacity = 0.5
         self.tintColor = .white
+        cellView.layer.cornerRadius = 18
+        cellView.layer.masksToBounds = true
+        cellView.layer.shadowOpacity = 0.5
     }
 }
