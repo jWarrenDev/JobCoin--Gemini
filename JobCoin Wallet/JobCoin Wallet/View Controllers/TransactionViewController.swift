@@ -30,6 +30,9 @@ class TransactionViewController: UIViewController {
         let nib = UINib(nibName: "CustomTransactionTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "customCell")
         
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        
         balanceLabel.layer.zPosition = +1
         
         let frame = CGRect(x: 0, y: 0, width: chartView.frame.width, height: chartView.frame.height )
@@ -62,12 +65,14 @@ class TransactionViewController: UIViewController {
         series.area = true
         series.color = ChartColors.blueColor()
         
+        
         chart.add(series)
         chart.showXLabelsAndGrid = false
         chart.backgroundColor = .black
-        chart.highlightLineColor = .white
+       // chart.highlightLineColor = .white
         chart.gridColor = .white
         chart.labelColor = .white
+        
         
     }
     
@@ -183,7 +188,9 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
         let transaction         = balance.transactions.reversed().compactMap{($0)}[indexPath.row]
         let personalTrans       = personalTransactions.reversed()[indexPath.row]
         let personalTransFloat  = Float(personalTrans)
-      
+        let trannsactionIndex   = ((indexPath.row) - transactions.count) * -1
+        
+        
         let formatter           = DateFormatter()
         formatter.locale        = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat    = "yyyy-MM-dd'T'H:mm:ss.SSS'Z'"
@@ -196,11 +203,14 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
         
         let dateString = formatter.string(from: convertedDate!)
         
-        cell.amountLabel.text       = "Amount \(transaction.amount)"
+        cell.amountLabel.text       = "Amount: \(transaction.amount)"
         cell.balanceLabel.text      = "Balance: \(personalTransFloat)"
-        cell.fromAddressLabel.text  = "From: \(transaction.fromAddress ?? "Origin")  "
+        cell.fromAddressLabel.text  = "From: \(transaction.fromAddress ?? "Origin")"
         cell.toAddressLabel.text    = "To: \(transaction.toAddress!)"
         cell.timeStampLabel.text    = dateString
+        
+        cell.transactionNumberLabel.text = "Transaction: \(trannsactionIndex)"
+        cell.hashNumberLabel.text        = "Txn Hash: 13094093829slj2923409"
         
         return cell
     }
