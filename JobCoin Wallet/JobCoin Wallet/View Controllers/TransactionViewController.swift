@@ -27,6 +27,9 @@ class TransactionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = "Address: \(self.user)";
+        
         let nib = UINib(nibName: "CustomTransactionTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "customCell")
         
@@ -123,9 +126,10 @@ class TransactionViewController: UIViewController {
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var balanceLabel: UILabel!
     
-    
-    @IBAction func signOutButton(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: false, completion:nil)
+    @IBAction func signOutButtonPressed(_ sender: Any) {
+        
+        navigationController?.popToRootViewController(animated: true)
+      
     }
     
     @IBAction func sendCoinsButtonPressed(_ sender: Any) {
