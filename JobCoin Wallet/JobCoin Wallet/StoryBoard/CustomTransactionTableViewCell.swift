@@ -46,17 +46,17 @@ class CustomTransactionTableViewCell: UITableViewCell {
         cellView.layer.borderWidth = 2
         cellView.layer.cornerRadius = 18
         cellView.layer.masksToBounds = false
-        cellView.layer.shadowOpacity = 5
+       // cellView.layer.shadowOpacity = 5
         
         colorView.layer.masksToBounds = true
         colorView.backgroundColor = .darkGray
         colorView.layer.cornerRadius = 18
         colorView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         
-        cellView.layer.shadowColor = UIColor.black.cgColor
-        cellView.layer.shadowOpacity = 0.3
-        cellView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        cellView.layer.shadowRadius = 2
+        //cellView.layer.shadowColor = UIColor.black.cgColor
+        //cellView.layer.shadowOpacity = 0.3
+        //cellView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        //cellView.layer.shadowRadius = 2
         
 //        let maskLayer = CAShapeLayer()
 //        maskLayer.path = UIBezierPath(roundedRect: colorView.bounds, byRoundingCorners: [.topLeft, .bottomLeft], cornerRadii: CGSize(width: 50, height: 40)).cgPath

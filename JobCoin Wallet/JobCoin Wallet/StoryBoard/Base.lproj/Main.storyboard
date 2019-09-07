@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GxK-d7-bZB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DCL-DA-BJe">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J15-vX-Ybb">
-                                <rect key="frame" x="50" y="94" width="314" height="300"/>
+                                <rect key="frame" x="50" y="138" width="314" height="300"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JobCoin" translatesAutoresizingMaskIntoConstraints="NO" id="lf0-OL-sfa">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="195"/>
@@ -56,6 +56,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DQ2-rP-hX6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="auj-92-t5D"/>
                     <connections>
                         <outlet property="loginButton" destination="W9U-Ro-Wu2" id="hJl-Jd-xBd"/>
                         <outlet property="userNameTextField" destination="n8r-S5-pet" id="kpF-An-5pR"/>
@@ -64,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22z-Yb-Ppm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-614" y="68"/>
+            <point key="canvasLocation" x="295.6521739130435" y="67.633928571428569"/>
         </scene>
         <!--Transaction View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -75,13 +76,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gDz-Dd-h4N">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n0-g3-F6Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="325"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oZc-PT-bqA">
-                                                <rect key="frame" x="42" y="36.5" width="330" height="66"/>
+                                                <rect key="frame" x="42" y="36.5" width="310" height="66"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="SNu-yT-hbz"/>
                                                     <constraint firstAttribute="height" constant="66" id="wDI-UV-Y7F"/>
@@ -102,15 +103,23 @@
                                             <constraint firstItem="oZc-PT-bqA" firstAttribute="leading" secondItem="0n0-g3-F6Z" secondAttribute="leading" constant="42" id="pBH-ml-EgC"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uB-fu-g41" customClass="JWButton" customModule="JobCoin_Wallet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="333" width="394" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="LXG-WU-xvC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Send JobCoins"/>
+                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fOV-ac-PVv">
-                                        <rect key="frame" x="0.0" y="333" width="414" height="447"/>
+                                        <rect key="frame" x="0.0" y="386" width="394" height="368"/>
                                         <color key="backgroundColor" red="0.0" green="0.68920922279999997" blue="0.92659163479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCell" rowHeight="45" id="3gU-Lk-pbQ" customClass="CustomTransactionTableViewCell" customModule="JobCoin_Wallet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="45"/>
+                                                <rect key="frame" x="0.0" y="28" width="394" height="45"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3gU-Lk-pbQ" id="WnN-P8-Q2O" customClass="TransactionTableViewCell" customModule="JobCoin_Wallet" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="44.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -120,34 +129,15 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="ohL-1y-Vkj"/>
                                         </connections>
                                     </tableView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="ioP-ES-egE">
-                                        <rect key="frame" x="0.0" y="788" width="414" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8t4-yM-7h6" customClass="JWButton" customModule="JobCoin_Wallet" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="144.5" height="30"/>
-                                                <state key="normal" title="Sign Out"/>
-                                                <connections>
-                                                    <action selector="signOutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viJ-YG-Fce"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyl-3N-IgR" customClass="JWButton" customModule="JobCoin_Wallet" customModuleProvider="target">
-                                                <rect key="frame" x="269.5" y="0.0" width="144.5" height="30"/>
-                                                <state key="normal" title="Send Coins"/>
-                                                <connections>
-                                                    <action selector="sendCoinsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B7a-hd-dCp"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.68920922279999997" blue="0.92659163479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gDz-Dd-h4N" secondAttribute="bottom" id="Klx-kn-kcD"/>
-                            <constraint firstItem="gDz-Dd-h4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Loq-Yh-AGo"/>
-                            <constraint firstItem="gDz-Dd-h4N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P18-W7-JWd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDz-Dd-h4N" secondAttribute="trailing" id="ZrW-f4-v1P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gDz-Dd-h4N" secondAttribute="bottom" constant="10" id="Klx-kn-kcD"/>
+                            <constraint firstItem="gDz-Dd-h4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Loq-Yh-AGo"/>
+                            <constraint firstItem="gDz-Dd-h4N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="P18-W7-JWd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDz-Dd-h4N" secondAttribute="trailing" constant="10" id="ZrW-f4-v1P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -159,7 +149,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="67.633928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a0R-gZ-m7N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DCL-DA-BJe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Ff-XP-PCT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GxK-d7-bZB" kind="relationship" relationship="rootViewController" id="tOu-Ye-QdZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ue9-4x-93d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614.49275362318849" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>

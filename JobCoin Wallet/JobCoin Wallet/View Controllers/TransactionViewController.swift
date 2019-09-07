@@ -38,6 +38,10 @@ class TransactionViewController: UIViewController {
         let frame = CGRect(x: 0, y: 0, width: chartView.frame.width, height: chartView.frame.height )
         chart = Chart(frame: frame)
         chartView.addSubview(chart)
+        chartView.layer.cornerRadius = 10
+        chartView.layer.masksToBounds = true
+       // chart.bounds = chart.frame.insetBy(dx: 10.0, dy: 10.0)
+
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateChart), name: .updatedAmount, object: nil)
        
