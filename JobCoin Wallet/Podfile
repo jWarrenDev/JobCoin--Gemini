@@ -8,5 +8,6 @@ target 'JobCoin Wallet' do
   # Pods for JobCoin Wallet
 
  pod "SwiftChart"
+ 
 
 end

@@ -90,6 +90,8 @@
 		4716670423198EA2005597BD /* JobCoin Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				47AA40E42323540000F6863D /* APIService */,
+				47AA40E3232337BB00F6863D /* Extensions */,
 				47834CED231D987900D16C96 /* View Controllers */,
 				47675E18232150D8005B24F3 /* Model  */,
 				47675E1A232157A9005B24F3 /* StoryBoard */,
@@ -110,9 +112,6 @@
 		47675E1923215795005B24F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				47238F64231F300100F519DB /* UIViewController+Alert.swift */,
-				47675E242321ED21005B24F3 /* APIService.swift */,
-				47675E1C2321642A005B24F3 /* JWButton.swift */,
 				4716670523198EA2005597BD /* AppDelegate.swift */,
 				4716670C23198EA4005597BD /* Assets.xcassets */,
 				4716671123198EA4005597BD /* Info.plist */,
@@ -144,6 +143,23 @@
 				47834CEB231D985600D16C96 /* SignInViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		47AA40E3232337BB00F6863D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47238F64231F300100F519DB /* UIViewController+Alert.swift */,
+				47675E1C2321642A005B24F3 /* JWButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		47AA40E42323540000F6863D /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				47675E242321ED21005B24F3 /* APIService.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -12,7 +12,7 @@ import UIKit
 
 extension UIViewController {
     
-    func displayMsg(title : String?, msg : String, numberOfButtons: Int = 1, completion: @escaping (Bool?) -> Void = { _ in } ) {
+    func displayMessage(title : String?, msg : String, numberOfButtons: Int = 1, completion: @escaping (Bool?) -> Void = { _ in } ) {
         
         let ac = UIAlertController.init(title: title, message: msg, preferredStyle: .alert)
         

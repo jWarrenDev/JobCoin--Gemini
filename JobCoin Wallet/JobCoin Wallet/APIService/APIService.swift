@@ -20,6 +20,7 @@ enum APIError: Error {
 class APIService {
    
     // TODO: build URLS from base URL
+    
     var tc = TransactionViewController()
     let baseURL = "http://jobcoin.gemini.com/helpless/api/"
     static let shared = APIService()
@@ -64,7 +65,7 @@ class APIService {
     }
 
     //MARK: - GET User Balance
-    func getUserBalance(user: String, completion: @escaping(Result<Balance, APIError>) -> Void)  {
+    func getUserBalance(user: String, completion: @escaping (Result<Balance, APIError>) -> Void)  {
     
         let jsonURLString = "https://jobcoin.gemini.com/helpless/api/addresses/\(user)"
         
@@ -99,7 +100,7 @@ class APIService {
     }
     
     // MARK: - POST Transactions
-    func postTransaction(transaction: Transaction, completion: @escaping(Result<Transaction, APIError>) -> Void) {
+    func postTransaction(transaction: Transaction, completion: @escaping (Result<Transaction, APIError>) -> Void) {
     
     do {
         guard  let url = URL(string: "http://jobcoin.gemini.com/helpless/api/transactions") else { fatalError() }
@@ -122,6 +123,7 @@ class APIService {
             if httpResponse.statusCode == 200 {
                 print("OK Transaction was sent! ")
             } else if httpResponse.statusCode == 422 {
+                // Create and UIAlert
                 print("Insufficent Funds")
             } else {
                 print("Unknown Response")

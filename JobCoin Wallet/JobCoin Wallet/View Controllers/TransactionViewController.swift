@@ -55,9 +55,9 @@ class TransactionViewController: UIViewController {
     
     @objc func updateChart() {
         
-        let currentBal = personalTransactions
-        let chartData = currentBal
-        let series = ChartSeries(chartData)
+        let currentBal  = personalTransactions
+        let chartData   = currentBal
+        let series      = ChartSeries(chartData)
         
         series.area = true
         series.color = ChartColors.blueColor()
@@ -123,14 +123,14 @@ class TransactionViewController: UIViewController {
         
         let ac = UIAlertController(title: "Who would you like to send Job Coins to?", message: "And How Much?", preferredStyle: .alert)
         ac.addTextField { (pTextField) in
-            pTextField.placeholder = "Name or Address"
-            pTextField.clearButtonMode = .whileEditing
-            pTextField.borderStyle = .roundedRect
+            pTextField.placeholder      = "Name or Address"
+            pTextField.clearButtonMode  = .whileEditing
+            pTextField.borderStyle      = .roundedRect
             }
         ac.addTextField() { (pTextField) in
-            pTextField.placeholder = "Amount to send "
-            pTextField.clearButtonMode = .whileEditing
-            pTextField.borderStyle = .roundedRect
+            pTextField.placeholder      = "Amount to send "
+            pTextField.clearButtonMode  = .whileEditing
+            pTextField.borderStyle      = .roundedRect
           
         }
         
@@ -138,7 +138,7 @@ class TransactionViewController: UIViewController {
             guard let toAddress = ac.textFields![0].text, !toAddress.isEmpty,
                 let amount = ac.textFields![1].text, !amount.isEmpty else { return }
             
-            self.displayMsg(title: "You have chosen to send \(amount) JobCoins to \(toAddress)", msg: "Please Confirm") {_ in
+            self.displayMessage(title: "You have chosen to send \(amount) JobCoins to \(toAddress)", msg: "Please Confirm") {_ in
                 
                 let fromAddress = self.user
                 let transactionPost = Transaction(timestamp: nil, toAddress: toAddress, amount: amount, fromAddress: fromAddress)
@@ -180,26 +180,27 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
         
         guard let balance = balance else { return cell }
         
-        let transaction = balance.transactions.reversed().compactMap{($0)}[indexPath.row]
-        let personalTrans = personalTransactions.reversed()[indexPath.row]
-        let personalTransFloat = Float(personalTrans)
+        let transaction         = balance.transactions.reversed().compactMap{($0)}[indexPath.row]
+        let personalTrans       = personalTransactions.reversed()[indexPath.row]
+        let personalTransFloat  = Float(personalTrans)
       
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "yyyy-MM-dd'T'H:mm:ss.SSS'Z'"
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        let convertedDate = formatter.date(from: transaction.timestamp!)
+        let formatter           = DateFormatter()
+        formatter.locale        = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat    = "yyyy-MM-dd'T'H:mm:ss.SSS'Z'"
+        formatter.timeZone      = TimeZone(secondsFromGMT: 0)
+        let convertedDate       = formatter.date(from: transaction.timestamp!)
         
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        formatter.timeZone = .autoupdatingCurrent
+        formatter.dateStyle     = .medium
+        formatter.timeStyle     = .short
+        formatter.timeZone      = .autoupdatingCurrent
+        
         let dateString = formatter.string(from: convertedDate!)
         
-        cell.amountLabel.text = "Amount \(transaction.amount)"
-        cell.balanceLabel.text = "Balance: \(personalTransFloat)"
-        cell.fromAddressLabel.text = "From: \(transaction.fromAddress ?? "Origin")  "
-        cell.toAddressLabel.text = "To: \(transaction.toAddress!)"
-        cell.timeStampLabel.text = dateString
+        cell.amountLabel.text       = "Amount \(transaction.amount)"
+        cell.balanceLabel.text      = "Balance: \(personalTransFloat)"
+        cell.fromAddressLabel.text  = "From: \(transaction.fromAddress ?? "Origin")  "
+        cell.toAddressLabel.text    = "To: \(transaction.toAddress!)"
+        cell.timeStampLabel.text    = dateString
         
         return cell
     }

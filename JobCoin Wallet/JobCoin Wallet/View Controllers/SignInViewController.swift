@@ -41,7 +41,7 @@ class SignInViewController: UIViewController {
     @IBAction func signInButtonPressed(_ sender: Any) {
         guard let user = userNameTextField.text, !user.isEmpty else {
             
-            displayMsg(title: "The address field empty", msg: "Please Try Again")
+            displayMessage(title: "The address field empty", msg: "Please Try Again")
             self.loginButton.shake()
             return
         }
@@ -54,7 +54,7 @@ class SignInViewController: UIViewController {
                 
             } else {
                 guard let user = userNameTextField.text else {return}
-                displayMsg(title: "The Address \(user) is not correct or found", msg: "Please Try again")
+                displayMessage(title: "The Address \(user) is not correct or found", msg: "Please Try again")
             }
         }
     }
