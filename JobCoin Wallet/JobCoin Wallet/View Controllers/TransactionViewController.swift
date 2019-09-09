@@ -27,8 +27,8 @@ class TransactionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // self.navigationItem.hidesBackButton = true
-        self.navigationItem.title = "Address: \(self.user)";
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = "User: \(self.user)";
         
         let nib = UINib(nibName: "CustomTransactionTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "customCell")
@@ -43,24 +43,24 @@ class TransactionViewController: UIViewController {
         chartView.addSubview(chart)
         chartView.layer.cornerRadius = 10
         chartView.layer.masksToBounds = true
-       // chart.bounds = chart.frame.insetBy(dx: 10.0, dy: 10.0)
-
+        
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateChart), name: .updatedAmount, object: nil)
-       
+        
         getUserBalance()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
+        
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
-   
+    
     // MARK: - Methods
     
     @objc func updateChart() {
@@ -70,16 +70,13 @@ class TransactionViewController: UIViewController {
         let series      = ChartSeries(chartData)
         
         series.area = true
-        series.color = ChartColors.blueColor()
-        
+        series.color = ChartColors.darkGreenColor()
         
         chart.add(series)
         chart.showXLabelsAndGrid = false
         chart.backgroundColor = .black
-       // chart.highlightLineColor = .white
         chart.gridColor = .white
         chart.labelColor = .white
-        
         
     }
     
@@ -129,7 +126,7 @@ class TransactionViewController: UIViewController {
     @IBAction func signOutButtonPressed(_ sender: Any) {
         
         navigationController?.popToRootViewController(animated: true)
-      
+        
     }
     
     @IBAction func sendCoinsButtonPressed(_ sender: Any) {
@@ -139,12 +136,12 @@ class TransactionViewController: UIViewController {
             pTextField.placeholder      = "Name or Address"
             pTextField.clearButtonMode  = .whileEditing
             pTextField.borderStyle      = .roundedRect
-            }
+        }
         ac.addTextField() { (pTextField) in
             pTextField.placeholder      = "Amount to send "
             pTextField.clearButtonMode  = .whileEditing
             pTextField.borderStyle      = .roundedRect
-          
+            
         }
         
         let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac] _ in
@@ -181,7 +178,7 @@ class TransactionViewController: UIViewController {
 }
 
 
-    // MARK: - TableView Extension
+// MARK: - TableView Extension
 
 extension TransactionViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -208,7 +205,6 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
         formatter.dateStyle     = .medium
         formatter.timeStyle     = .short
         formatter.timeZone      = .autoupdatingCurrent
-        
         let dateString = formatter.string(from: convertedDate!)
         
         cell.amountLabel.text       = "Amount: \(transaction.amount)"
@@ -217,6 +213,7 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
         cell.toAddressLabel.text    = "To: \(transaction.toAddress!)"
         cell.timeStampLabel.text    = dateString
         
+        // Place Holder labels
         cell.transactionNumberLabel.text = "Transaction: \(trannsactionIndex)"
         cell.hashNumberLabel.text        = "Txn Hash: 13094093829slj2923409"
         
