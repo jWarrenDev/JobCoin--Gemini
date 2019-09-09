@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomTransactionTableViewCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var toAddressLabel: UILabel!
@@ -27,11 +27,11 @@ class CustomTransactionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        self.layer.backgroundColor = #colorLiteral(red: 0, green: 0.6892092228, blue: 0.9265916348, alpha: 1)
+        
+        self.layer.backgroundColor = #colorLiteral(red: 0.5775073171, green: 0.7880946398, blue: 0.4146306813, alpha: 1)
         self.layer.cornerRadius = 18
         self.layer.masksToBounds = true
         self.layer.shadowOpacity = 0.5
@@ -43,23 +43,14 @@ class CustomTransactionTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        cellView.layer.borderWidth = 2
+      
         cellView.layer.cornerRadius = 18
-        cellView.layer.masksToBounds = false
-        cellView.layer.shadowOpacity = 5
-        
+        cellView.layer.masksToBounds = true
+       
         colorView.layer.masksToBounds = true
-        colorView.backgroundColor = .darkGray
-        colorView.layer.cornerRadius = 18
+        colorView.backgroundColor = #colorLiteral(red: 0.2545096278, green: 0.4599397182, blue: 0.0195639655, alpha: 1)
+        colorView.layer.cornerRadius = 14
         colorView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         
-        cellView.layer.shadowColor = UIColor.black.cgColor
-        cellView.layer.shadowOpacity = 0.3
-        cellView.layer.shadowOffset = CGSize(width: 10, height: 10)
-        cellView.layer.shadowRadius = 2
-        
-//        let maskLayer = CAShapeLayer()
-//        maskLayer.path = UIBezierPath(roundedRect: colorView.bounds, byRoundingCorners: [.topLeft, .bottomLeft], cornerRadii: CGSize(width: 50, height: 40)).cgPath
-//        colorView.layer.mask = maskLayer
     }
 }

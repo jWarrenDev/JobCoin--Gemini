@@ -26,12 +26,7 @@ class JWButton: UIButton {
         tintColor = .white
         layer.borderColor = UIColor.gray.cgColor
         layer.borderWidth = 1
-        
-        layer.shadowRadius = 1
-        layer.shadowOffset = CGSize(width: 3, height: 3)
-        layer.shadowOpacity = 0.5
-        layer.shadowColor = UIColor.gray.cgColor
-        
+
     }
     
     func shake() {
