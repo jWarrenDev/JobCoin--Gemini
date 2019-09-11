@@ -43,10 +43,10 @@ class CustomTransactionTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-      
+        
         cellView.layer.cornerRadius = 18
         cellView.layer.masksToBounds = true
-       
+        
         colorView.layer.masksToBounds = true
         colorView.backgroundColor = #colorLiteral(red: 0.2545096278, green: 0.4599397182, blue: 0.0195639655, alpha: 1)
         colorView.layer.cornerRadius = 14

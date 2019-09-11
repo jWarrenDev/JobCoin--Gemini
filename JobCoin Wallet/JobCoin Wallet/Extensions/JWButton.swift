@@ -26,7 +26,7 @@ class JWButton: UIButton {
         tintColor = .white
         layer.borderColor = UIColor.gray.cgColor
         layer.borderWidth = 1
-
+        
     }
     
     func shake() {

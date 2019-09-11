@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
         
-       
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +43,7 @@ class SignInViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-    
+        
         super.viewDidDisappear(true)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
@@ -68,7 +68,7 @@ class SignInViewController: UIViewController {
             self.performSegue(withIdentifier:"usersegue", sender: UIButton.self)
             
         } else {
-            guard let user = userNameTextField.text else {return}
+            guard let user = userNameTextField.text else { return }
             displayMessage(title: "The Address \(user) is not correct or found", msg: "Please Try again")
         }
         
